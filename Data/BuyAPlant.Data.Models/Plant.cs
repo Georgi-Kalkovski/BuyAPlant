@@ -12,6 +12,7 @@
         public Plant()
         {
             this.Images = new HashSet<Image>();
+            this.Reviews = new HashSet<Review>();
         }
 
         [Required]
@@ -43,9 +44,7 @@
 
         public Description Description { get; set; }
 
-        public int ReviewId { get; set; }
-
-        public Review Review { get; set; }
+        public ICollection<Review> Reviews { get; set; }
 
         public ICollection<Image> Images { get; set; }
     }
