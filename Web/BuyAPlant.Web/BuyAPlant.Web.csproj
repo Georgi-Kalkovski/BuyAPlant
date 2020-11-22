@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-BuyAPlant-BBB373B5-EF3F-4DBB-B8AA-7152CEC275BF</UserSecretsId>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.9" />
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.113" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.9" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.205" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuyAPlant.Common\BuyAPlant.Common.csproj" />
+    <ProjectReference Include="..\..\Data\BuyAPlant.Data.Models\BuyAPlant.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\BuyAPlant.Data\BuyAPlant.Data.csproj" />
+    <ProjectReference Include="..\..\Services\BuyAPlant.Services.Data\BuyAPlant.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Services\BuyAPlant.Services.Mapping\BuyAPlant.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Services\BuyAPlant.Services.Messaging\BuyAPlant.Services.Messaging.csproj" />
+    <ProjectReference Include="..\..\Services\BuyAPlant.Services\BuyAPlant.Services.csproj" />
+    <ProjectReference Include="..\BuyAPlant.Web.Infrastructure\BuyAPlant.Web.Infrastructure.csproj" />
+    <ProjectReference Include="..\BuyAPlant.Web.ViewModels\BuyAPlant.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\About\" />
+    <Folder Include="Views\Contacts\" />
+    <Folder Include="Views\Advices\" />
+    <Folder Include="Views\Plants\" />
+  </ItemGroup>
+</Project>
